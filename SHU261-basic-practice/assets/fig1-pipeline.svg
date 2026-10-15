@@ -44,7 +44,7 @@
 
   <!-- Row 3: funnel -->
   <rect x="180" y="378" width="820" height="60" rx="12" fill="#334155"/>
-  <text x="590" y="404" fill="#f1f5f9" font-size="17" font-weight="700" text-anchor="middle">② 批量生成 + 盲听筛选（高淘汰率是常态，需写进排期）</text>
+  <text x="590" y="404" fill="#f1f5f9" font-size="17" font-weight="700" text-anchor="middle">② 批量生成 + 盲听筛选（高淘汰率是常态，需要写进项目计划）</text>
   <text x="590" y="425" fill="#94a3b8" font-size="12" text-anchor="middle">结构化 Prompt 模板：对象 + 材质 + 动作 + 空间 + 距离 + 情绪 + 时长 + 否定项</text>
 
   <line x1="220" y1="340" x2="420" y2="378" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
@@ -65,6 +65,6 @@
 
   <!-- Row 6: runtime -->
   <rect x="330" y="654" width="520" height="34" rx="10" fill="#065f46"/>
-  <text x="590" y="676" fill="#d1fae5" font-size="14" text-anchor="middle">⑤ 游戏内验证 → 不达标则回到 ②，形成闭环</text>
+  <text x="590" y="676" fill="#d1fae5" font-size="14" text-anchor="middle">⑤ 游戏内验证，未达标则回到 ②，形成循环</text>
   <line x1="590" y1="622" x2="590" y2="654" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
 </svg>

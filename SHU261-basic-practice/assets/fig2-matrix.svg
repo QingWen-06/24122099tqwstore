@@ -33,7 +33,7 @@
 
   <rect x="30" y="394" width="220" height="120" fill="#e2e8f0"/>
   <text x="140" y="440" fill="#0f172a" font-size="16" font-weight="700" text-anchor="middle">Video-to-Audio</text>
-  <text x="140" y="466" fill="#475569" font-size="12" text-anchor="middle">视频 → 对齐音频</text>
+  <text x="140" y="466" fill="#475569" font-size="12" text-anchor="middle">视频 → 同步音频</text>
   <text x="140" y="488" fill="#475569" font-size="12" text-anchor="middle">V2A</text>
 
   <rect x="30" y="514" width="220" height="120" fill="#e2e8f0"/>
@@ -43,7 +43,7 @@
 
   <!-- Voice column -->
   <rect x="250" y="154" width="220" height="120" fill="#e0f2fe"/>
-  <text x="360" y="192" fill="#075985" font-size="13" text-anchor="middle">主要落点</text>
+  <text x="360" y="192" fill="#075985" font-size="13" text-anchor="middle">主要场景</text>
   <text x="360" y="220" fill="#0c4a6e" font-size="13" text-anchor="middle">对白 · 播报 · 旁白</text>
   <text x="360" y="246" fill="#0c4a6e" font-size="13" text-anchor="middle">多语言本地化配音</text>
 
@@ -63,12 +63,12 @@
   <text x="580" y="220" fill="#94a3b8" font-size="14" text-anchor="middle">不适用</text>
 
   <rect x="470" y="274" width="220" height="120" fill="#ede9fe"/>
-  <text x="580" y="312" fill="#5b21b6" font-size="13" text-anchor="middle">主要落点</text>
+  <text x="580" y="312" fill="#5b21b6" font-size="13" text-anchor="middle">主要场景</text>
   <text x="580" y="340" fill="#4c1d95" font-size="13" text-anchor="middle">循环 bed · 分层 stem</text>
   <text x="580" y="366" fill="#4c1d95" font-size="13" text-anchor="middle">stinger · 过场成曲</text>
 
   <rect x="470" y="394" width="220" height="120" fill="#ede9fe"/>
-  <text x="580" y="440" fill="#5b21b6" font-size="13" text-anchor="middle">按键位对齐配乐</text>
+  <text x="580" y="440" fill="#5b21b6" font-size="13" text-anchor="middle">按键位同步配乐</text>
   <text x="580" y="466" fill="#4c1d95" font-size="13" text-anchor="middle">过场音乐与画面同步</text>
 
   <rect x="470" y="514" width="220" height="120" fill="#ede9fe"/>
@@ -80,7 +80,7 @@
   <text x="800" y="220" fill="#94a3b8" font-size="14" text-anchor="middle">不适用</text>
 
   <rect x="690" y="274" width="220" height="120" fill="#fef3c7"/>
-  <text x="800" y="312" fill="#92400e" font-size="13" text-anchor="middle">主要落点</text>
+  <text x="800" y="312" fill="#92400e" font-size="13" text-anchor="middle">主要场景</text>
   <text x="800" y="340" fill="#78350f" font-size="13" text-anchor="middle">音效 · 环境 bed · UI</text>
   <text x="800" y="366" fill="#78350f" font-size="13" text-anchor="middle">多变体抗重复疲劳</text>
 
@@ -106,7 +106,7 @@
   <rect x="910" y="394" width="220" height="120" fill="#d1fae5"/>
   <text x="1020" y="440" fill="#065f46" font-size="13" text-anchor="middle">TTV → V2A 串接</text>
   <text x="1020" y="466" fill="#064e3b" font-size="13" text-anchor="middle">先出动画预览</text>
-  <text x="1020" y="488" fill="#064e3b" font-size="13" text-anchor="middle">再生成对齐音频</text>
+  <text x="1020" y="488" fill="#064e3b" font-size="13" text-anchor="middle">再生成同步音频</text>
 
   <rect x="910" y="514" width="220" height="120" fill="#d1fae5"/>
   <text x="1020" y="560" fill="#065f46" font-size="13" text-anchor="middle">入库前标准化</text>
