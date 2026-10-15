@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="620" viewBox="0 0 1180 620" font-family="Microsoft YaHei, PingFang SC, Hiragino Sans GB, sans-serif">
+  <defs>
+    <linearGradient id="stage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1180" height="620" fill="#f8fafc"/>
+
+  <text x="590" y="48" fill="#0f172a" font-size="27" font-weight="700" text-anchor="middle">预制对白生产流程与 AIGC 介入点</text>
+  <text x="590" y="76" fill="#64748b" font-size="14" text-anchor="middle">按一条对白的真实生产顺序排列，方框下方标注该环节 AIGC 可承担的工作</text>
+
+  <!-- stage row -->
+  <g>
+    <rect x="45" y="110" width="160" height="104" rx="10" fill="url(#stage)"/>
+    <text x="125" y="146" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">剧本与台词表</text>
+    <text x="125" y="172" fill="#bfdbfe" font-size="12" text-anchor="middle">策划编写</text>
+    <text x="125" y="192" fill="#bfdbfe" font-size="12" text-anchor="middle">配音导演整理</text>
+  </g>
+  <g>
+    <rect x="231" y="110" width="160" height="104" rx="10" fill="url(#stage)"/>
+    <text x="311" y="146" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">文本规范化</text>
+    <text x="311" y="172" fill="#bfdbfe" font-size="12" text-anchor="middle">数字 · 符号</text>
+    <text x="311" y="192" fill="#bfdbfe" font-size="12" text-anchor="middle">多音字 · 专名</text>
+  </g>
+  <g>
+    <rect x="417" y="110" width="160" height="104" rx="10" fill="url(#stage)"/>
+    <text x="497" y="146" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">音色方案</text>
+    <text x="497" y="172" fill="#bfdbfe" font-size="12" text-anchor="middle">选角 · 试音</text>
+    <text x="497" y="192" fill="#bfdbfe" font-size="12" text-anchor="middle">确定克隆路线</text>
+  </g>
+  <g>
+    <rect x="603" y="110" width="160" height="104" rx="10" fill="url(#stage)"/>
+    <text x="683" y="146" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">语音生成</text>
+    <text x="683" y="172" fill="#bfdbfe" font-size="12" text-anchor="middle">真人录制</text>
+    <text x="683" y="192" fill="#bfdbfe" font-size="12" text-anchor="middle">或合成生成</text>
+  </g>
+  <g>
+    <rect x="789" y="110" width="160" height="104" rx="10" fill="url(#stage)"/>
+    <text x="869" y="146" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">后期处理</text>
+    <text x="869" y="172" fill="#bfdbfe" font-size="12" text-anchor="middle">剪辑 · 修音</text>
+    <text x="869" y="192" fill="#bfdbfe" font-size="12" text-anchor="middle">响度统一</text>
+  </g>
+  <g>
+    <rect x="975" y="110" width="160" height="104" rx="10" fill="url(#stage)"/>
+    <text x="1055" y="146" fill="#ffffff" font-size="15" font-weight="700" text-anchor="middle">中间件集成</text>
+    <text x="1055" y="172" fill="#bfdbfe" font-size="12" text-anchor="middle">事件 · 变体</text>
+    <text x="1055" y="192" fill="#bfdbfe" font-size="12" text-anchor="middle">播放规则</text>
+  </g>
+
+  <!-- arrows -->
+  <line x1="207" y1="162" x2="229" y2="162" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="393" y1="162" x2="415" y2="162" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="579" y1="162" x2="601" y2="162" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="765" y1="162" x2="787" y2="162" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="951" y1="162" x2="973" y2="162" stroke="#64748b" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- connectors down -->
+  <line x1="125" y1="214" x2="125" y2="252" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="311" y1="214" x2="311" y2="252" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="497" y1="214" x2="497" y2="252" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="683" y1="214" x2="683" y2="252" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="869" y1="214" x2="869" y2="252" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 4"/>
+  <line x1="1055" y1="214" x2="1055" y2="252" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- AIGC rows -->
+  <g>
+    <rect x="45" y="254" width="160" height="150" rx="10" fill="#e2e8f0" stroke="#94a3b8"/>
+    <text x="125" y="282" fill="#475569" font-size="13" font-weight="700" text-anchor="middle">以人力为主</text>
+    <text x="125" y="310" fill="#64748b" font-size="12" text-anchor="middle">剧情创作与角色</text>
+    <text x="125" y="330" fill="#64748b" font-size="12" text-anchor="middle">设定由人完成</text>
+    <text x="125" y="362" fill="#94a3b8" font-size="11" text-anchor="middle">可辅助：语句长度</text>
+    <text x="125" y="380" fill="#94a3b8" font-size="11" text-anchor="middle">预估与字段补全</text>
+  </g>
+  <g>
+    <rect x="231" y="254" width="160" height="150" rx="10" fill="#dcfce7" stroke="#22c55e"/>
+    <text x="311" y="282" fill="#166534" font-size="13" font-weight="700" text-anchor="middle">介入充分</text>
+    <text x="311" y="310" fill="#15803d" font-size="12" text-anchor="middle">数字与符号归一化</text>
+    <text x="311" y="330" fill="#15803d" font-size="12" text-anchor="middle">发音词典校验</text>
+    <text x="311" y="362" fill="#16a34a" font-size="11" text-anchor="middle">需要人工复核</text>
+    <text x="311" y="380" fill="#16a34a" font-size="11" text-anchor="middle">多音字与专名读音</text>
+  </g>
+  <g>
+    <rect x="417" y="254" width="160" height="150" rx="10" fill="#dcfce7" stroke="#22c55e"/>
+    <text x="497" y="282" fill="#166534" font-size="13" font-weight="700" text-anchor="middle">介入充分</text>
+    <text x="497" y="310" fill="#15803d" font-size="12" text-anchor="middle">候选音色快速试听</text>
+    <text x="497" y="330" fill="#15803d" font-size="12" text-anchor="middle">缩短选角周期</text>
+    <text x="497" y="362" fill="#16a34a" font-size="11" text-anchor="middle">需要人工确认</text>
+    <text x="497" y="380" fill="#16a34a" font-size="11" text-anchor="middle">音色与角色匹配度</text>
+  </g>
+  <g>
+    <rect x="603" y="254" width="160" height="150" rx="10" fill="#fef3c7" stroke="#f59e0b"/>
+    <text x="683" y="282" fill="#92400e" font-size="13" font-weight="700" text-anchor="middle">介入良好</text>
+    <text x="683" y="310" fill="#a16207" font-size="12" text-anchor="middle">合成替代部分角色</text>
+    <text x="683" y="330" fill="#a16207" font-size="12" text-anchor="middle">批量生成语气变体</text>
+    <text x="683" y="362" fill="#ca8a04" font-size="11" text-anchor="middle">关键剧情仍由</text>
+    <text x="683" y="380" fill="#ca8a04" font-size="11" text-anchor="middle">真人表演承担</text>
+  </g>
+  <g>
+    <rect x="789" y="254" width="160" height="150" rx="10" fill="#e0f2fe" stroke="#0ea5e9"/>
+    <text x="869" y="282" fill="#075985" font-size="13" font-weight="700" text-anchor="middle">部分介入</text>
+    <text x="869" y="310" fill="#0369a1" font-size="12" text-anchor="middle">批量修剪静音</text>
+    <text x="869" y="330" fill="#0369a1" font-size="12" text-anchor="middle">统一响度与命名</text>
+    <text x="869" y="362" fill="#0284c7" font-size="11" text-anchor="middle">精修与艺术判断</text>
+    <text x="869" y="380" fill="#0284c7" font-size="11" text-anchor="middle">仍需人工完成</text>
+  </g>
+  <g>
+    <rect x="975" y="254" width="160" height="150" rx="10" fill="#e0f2fe" stroke="#0ea5e9"/>
+    <text x="1055" y="282" fill="#075985" font-size="13" font-weight="700" text-anchor="middle">部分介入</text>
+    <text x="1055" y="310" fill="#0369a1" font-size="12" text-anchor="middle">生成事件绑定清单</text>
+    <text x="1055" y="330" fill="#0369a1" font-size="12" text-anchor="middle">校验命名一致性</text>
+    <text x="1055" y="362" fill="#0284c7" font-size="11" text-anchor="middle">播放规则与优先级</text>
+    <text x="1055" y="380" fill="#0284c7" font-size="11" text-anchor="middle">由音频设计师设定</text>
+  </g>
+
+  <!-- bottom band -->
+  <rect x="45" y="440" width="1090" height="86" rx="10" fill="#0f172a"/>
+  <text x="590" y="470" fill="#f8fafc" font-size="15" font-weight="700" text-anchor="middle">人工投入集中的三处：台词表准备 · 盲听筛选 · 后期精修</text>
+  <text x="590" y="498" fill="#cbd5e1" font-size="13" text-anchor="middle">其余环节可以批量化执行，这也是提升制作效率的主要空间</text>
+
+  <rect x="45" y="548" width="1090" height="52" rx="10" fill="#e2e8f0"/>
+  <text x="590" y="580" fill="#334155" font-size="13" text-anchor="middle">引入顺序建议：先做文本规范化与变体生产，取得稳定收益后再扩展到合成替代与本地化首版</text>
+</svg>

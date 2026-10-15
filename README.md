@@ -16,32 +16,42 @@
 | `README.md` | 本文件（仓库总览与作业索引） |
 | `.gitignore` | 忽略规则（Office 临时文件 / Unity 工程等） |
 | `SHU261-basic-practice/` | 平时作业目录 |
-| `SHU261-basic-practice/AIGC-Game-Audio-Research.md` | 【Task】调研报告（主要成果） |
-| `SHU261-basic-practice/assets/fig1-pipeline.svg` | 配图 1：AIGC 游戏音频生产管线总览 |
-| `SHU261-basic-practice/assets/fig2-matrix.svg` | 配图 2：生成模式 × 音频方向 交叉矩阵 |
+| `SHU261-basic-practice/AIGC-Game-Voice-Research.md` | 【Task】调研报告（主要成果） |
+| `SHU261-basic-practice/assets/fig1-dialogue-pipeline.svg` | 配图 1：预制对白生产流程与 AIGC 介入点 |
+| `SHU261-basic-practice/assets/fig2-runtime-voice.svg` | 配图 2：运行时动态语音流程与延迟构成 |
 
 ---
 
 ## 📝 作业索引
 
-### Task 01 — 当下 AIGC 在游戏音频设计中的应用（调研）
+### Task 01 — 当下 AIGC 在游戏语音（Voice）设计中的应用（调研）
+
+课程题目的范围包含 Voice、Music、SFX 三个方向，本次作业把范围收敛到 **Voice 方向**，只讨论游戏内人声对白的生产与播出。
 
 | 项目 | 内容 |
 | --- | --- |
-| 报告文件 | [`SHU261-basic-practice/AIGC-Game-Audio-Research.md`](./SHU261-basic-practice/AIGC-Game-Audio-Research.md) |
-| 配图 | [`fig1-pipeline.svg`](./SHU261-basic-practice/assets/fig1-pipeline.svg)、[`fig2-matrix.svg`](./SHU261-basic-practice/assets/fig2-matrix.svg) |
-| 调研角度 | ① Voice / Music / SFX 三个方向　② Text-to-Audio、Video-to-Audio 等生成模式 |
-| 核心结论 | AIGC 在游戏音频中最成熟的应用场景是**变体生产与初稿**；分轨能力与元数据台账比单次生成质量更决定工程可用性 |
+| 报告文件 | [`SHU261-basic-practice/AIGC-Game-Voice-Research.md`](./SHU261-basic-practice/AIGC-Game-Voice-Research.md) |
+| 配图 | [`fig1-dialogue-pipeline.svg`](./SHU261-basic-practice/assets/fig1-dialogue-pipeline.svg)、[`fig2-runtime-voice.svg`](./SHU261-basic-practice/assets/fig2-runtime-voice.svg) |
+| 讨论范围 | 语音合成、语音克隆、情感与韵律控制、多语言本地化、运行时动态对白 |
+| 不讨论 | 音乐生成、音效与拟音生成、语音识别、演唱合成 |
+| 核心结论 | AIGC 在 Voice 方向最成熟的应用是变体生产与本地化首版；文本侧质量决定整条流程的天花板；音色必须作为带授权记录的资产管理 |
 
-**报告覆盖范围**
+**报告章节**
 
-1. 技术底座：神经音频编解码器 + 自回归 / 扩散生成器
-2. Voice 方向：临时配音、多语言本地化、NPC 语气变体、声音身份资产管理
-3. Music 方向：循环 bed、分轨、垂直重混与水平重排等自适应音乐技术
-4. SFX 方向：Video-to-Audio 拟音替代、变体爆炸、结构化提示词模板
-5. 六类生成模式的交叉对比（TTS / TTA / TTM / V2A / A2A / TTV）
-6. 从 Prompt 到 Wwise 事件的完整工作流与工程规范
-7. 版权、声音人格权、《人工智能生成合成内容标识办法》（GB 45438—2025）、平台披露等合规风险
+1. 范围界定与 Voice 方向的工作量结构
+2. 预制对白的生产流程与 AIGC 介入点
+3. 文本侧：台词表字段与文本规范化（数字、多音字、专有名词、运行时变量）
+4. 音色侧：零样本克隆 / 少样本微调 / 完整微调三条路线，音色一致性的四个维度
+5. 表演侧：四种情感控制手段、变体生成做法、八类常见失败模式
+6. 语言侧：跨语言克隆与时长约束
+7. 运行时：动态对白流程、延迟构成与优化手段
+8. 工程规范与 Wwise 对接（Dialogue Event、Random Container、RTPC、Voice Limit）
+9. 质量评估：盲听测试设计与三级门槛
+10. 风险与合规：声音人格权、内容标识（GB 45438—2025）、平台披露、从业者权益
+11. 实例流程：一条台词从录入到游戏内播出的十一个步骤
+12. 结论与展望
+13. 术语对照
+14. 参考资料
 
 ---
 
