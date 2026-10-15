@@ -1,0 +1,60 @@
+# ===== 操作系统 =====
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# ===== Office 临时文件 =====
+~$*.doc
+~$*.docx
+~$*.xls
+~$*.xlsx
+~$*.ppt
+~$*.pptx
+*.tmp
+
+# ===== 编辑器 / IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===== Unity 工程 =====
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.apk
+*.aab
+*.unitypackage
+
+# ===== 音频工程产物（源工程建议保留，下列为可再生成的缓存） =====
+*.wproj.bak
+*.bak
+*.cache
+GeneratedSoundBanks/
+.cache/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ===== Node =====
+node_modules/
+npm-debug.log*

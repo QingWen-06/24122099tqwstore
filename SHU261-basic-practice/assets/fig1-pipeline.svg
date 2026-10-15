@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="700" viewBox="0 0 1180 700" font-family="Microsoft YaHei, PingFang SC, Hiragino Sans GB, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7dd3fc"/>
+    </marker>
+  </defs>
+
+  <rect width="1180" height="700" fill="url(#bg)"/>
+
+  <text x="590" y="52" fill="#f8fafc" font-size="30" font-weight="700" text-anchor="middle">AIGC 游戏音频生产管线总览</text>
+  <text x="590" y="82" fill="#94a3b8" font-size="15" text-anchor="middle">Voice / Music / SFX 三线并行 · 生成模式驱动 · 中间件承载</text>
+
+  <!-- Row 1: requirement -->
+  <rect x="330" y="110" width="520" height="66" rx="12" fill="#1d4ed8" opacity="0.85"/>
+  <text x="590" y="138" fill="#ffffff" font-size="18" font-weight="700" text-anchor="middle">① 音频需求表</text>
+  <text x="590" y="161" fill="#dbeafe" font-size="13" text-anchor="middle">事件名 · 时长 · 材质 · 情绪 · 变体数 · 空间属性</text>
+
+  <!-- Row 2: three tracks -->
+  <rect x="70" y="220" width="300" height="120" rx="12" fill="#0e7490" opacity="0.9"/>
+  <text x="220" y="252" fill="#ffffff" font-size="18" font-weight="700" text-anchor="middle">Voice</text>
+  <text x="220" y="278" fill="#cffafe" font-size="13" text-anchor="middle">TTS · 零样本克隆 · 情感控制</text>
+  <text x="220" y="300" fill="#cffafe" font-size="13" text-anchor="middle">临时配音 / 本地化 / NPC 语气变体</text>
+  <text x="220" y="322" fill="#a5f3fc" font-size="12" text-anchor="middle">合规：声音人格权 · 明示授权台账</text>
+
+  <rect x="440" y="220" width="300" height="120" rx="12" fill="#7c3aed" opacity="0.9"/>
+  <text x="590" y="252" fill="#ffffff" font-size="18" font-weight="700" text-anchor="middle">Music</text>
+  <text x="590" y="278" fill="#ede9fe" font-size="13" text-anchor="middle">Text-to-Music · 分轨生成</text>
+  <text x="590" y="300" fill="#ede9fe" font-size="13" text-anchor="middle">循环 bed / 垂直重混 / 水平重排</text>
+  <text x="590" y="322" fill="#ddd6fe" font-size="12" text-anchor="middle">合规：训练数据授权 · 风格模仿风险</text>
+
+  <rect x="810" y="220" width="300" height="120" rx="12" fill="#b45309" opacity="0.9"/>
+  <text x="960" y="252" fill="#ffffff" font-size="18" font-weight="700" text-anchor="middle">SFX</text>
+  <text x="960" y="278" fill="#fef3c7" font-size="13" text-anchor="middle">Text-to-Audio · Video-to-Audio</text>
+  <text x="960" y="300" fill="#fef3c7" font-size="13" text-anchor="middle">拟音替代 / 变体爆炸 / 环境 bed</text>
+  <text x="960" y="322" fill="#fde68a" font-size="12" text-anchor="middle">合规：内容标识 · 平台披露</text>
+
+  <line x1="590" y1="176" x2="220" y2="220" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="590" y1="176" x2="590" y2="220" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="590" y1="176" x2="960" y2="220" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Row 3: funnel -->
+  <rect x="180" y="378" width="820" height="60" rx="12" fill="#334155"/>
+  <text x="590" y="404" fill="#f1f5f9" font-size="17" font-weight="700" text-anchor="middle">② 批量生成 + 盲听筛选（高淘汰率是常态，需写进排期）</text>
+  <text x="590" y="425" fill="#94a3b8" font-size="12" text-anchor="middle">结构化 Prompt 模板：对象 + 材质 + 动作 + 空间 + 距离 + 情绪 + 时长 + 否定项</text>
+
+  <line x1="220" y1="340" x2="420" y2="378" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="590" y1="340" x2="590" y2="378" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="960" y1="340" x2="760" y2="378" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Row 4: standardization -->
+  <rect x="180" y="470" width="820" height="60" rx="12" fill="#0f766e"/>
+  <text x="590" y="496" fill="#ffffff" font-size="17" font-weight="700" text-anchor="middle">③ 后期标准化：无缝循环点 · 去噪 · 统一响度 LUFS · 48kHz / 24bit WAV</text>
+  <text x="590" y="517" fill="#ccfbf1" font-size="12" text-anchor="middle">命名规范：Play_Footstep_Wood_01.wav · 记录模型版本与随机种子以保证可复现</text>
+  <line x1="590" y1="438" x2="590" y2="470" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Row 5: middleware -->
+  <rect x="180" y="562" width="820" height="60" rx="12" fill="#1e40af"/>
+  <text x="590" y="588" fill="#ffffff" font-size="17" font-weight="700" text-anchor="middle">④ 中间件承载：Wwise / FMOD / Elias 4</text>
+  <text x="590" y="609" fill="#bfdbfe" font-size="12" text-anchor="middle">Random Container（变体）· Switch（材质）· RTPC（血量/距离）· 总线与空间化</text>
+  <line x1="590" y1="530" x2="590" y2="562" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Row 6: runtime -->
+  <rect x="330" y="654" width="520" height="34" rx="10" fill="#065f46"/>
+  <text x="590" y="676" fill="#d1fae5" font-size="14" text-anchor="middle">⑤ 游戏内验证 → 不达标则回到 ②，形成闭环</text>
+  <line x1="590" y1="622" x2="590" y2="654" stroke="#7dd3fc" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>
