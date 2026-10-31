@@ -41,7 +41,8 @@ SHU261-final/
 │  ├─ split_onsets.py               冲击声自动切分（一次录一串动作 → 逐条资产）
 │  ├─ inspect_wav.py                WAV 体检（格式/峰值/RMS/削波）
 │  ├─ analyze_wav.py                内容分析（电平包络/分频段能量/声道相关性）
-│  ├─ wwise_import.lua              Wwise 导入与层级整理（WAAPI）
+│  ├─ wwise_scaffold.lua            Wwise 脚手架：建目录/容器/衰减 + 导入整理资产（WAAPI）
+│  ├─ wwise_import.lua              Wwise 增量导入（已有结构时补导新资产，WAAPI）
 │  └─ wwise_build.lua               Wwise 参数/Event/SoundBank 构建（WAAPI）
 └─ wwise/
    └─ BedroomAmbience/              Wwise 工程（Wwise 2025.1.12.9287）
@@ -123,8 +124,8 @@ SHU261-final/
 
 | 项目 | 版本 / 说明 |
 | --- | --- |
-| Wwise | **2025.1.12.9287**（题目要求 2025.1.11.9262；同一 2025.1 补丁线，工程格式与 WAAPI 完全一致，`project schema 133`） |
-| Wwise 工程 | `BedroomAmbience`，平台 Windows |
+| Wwise | **2025.1.11.9262**（与题目要求完全一致的版本；`project schema 133`） |
+| Wwise 工程 | `BedroomAmbience`，平台 Windows，工程头 `WwiseVersion="v2025.1.11" WwiseBuild="9262"` |
 | 录音设备 | 安卓手机，48 kHz / 24 bit / 立体声双麦 |
 | 处理环境 | Python 3.13，纯标准库（无第三方依赖），Windows |
 | Wwise 自动化 | `WwiseConsole execute-lua-script` + WAAPI（`wa_call`） |
@@ -149,9 +150,9 @@ python tools/split_onsets.py `
   --in raw_keyboard.wav --out-dir staging --prefix KEY `
   --min-gap 0.03 --thresh 10
 
-# 4. Wwise：导入 + 整理层级，然后设置参数/事件/SoundBank
-WwiseConsole execute-lua-script tools/wwise_import.lua --project <proj>
-WwiseConsole execute-lua-script tools/wwise_build.lua  --project <proj>
+# 4. Wwise：脚手架建立结构并导入资产 → 设置参数/事件/SoundBank → 生成 SoundBank
+WwiseConsole execute-lua-script tools/wwise_scaffold.lua --project <proj>
+WwiseConsole execute-lua-script tools/wwise_build.lua    --project <proj>
 WwiseConsole generate-soundbank <proj> --platform Windows
 ```
 

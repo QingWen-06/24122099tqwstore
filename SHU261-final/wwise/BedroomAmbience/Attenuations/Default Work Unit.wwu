@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{133000AA-8E58-4BEA-8A46-3AB62C1F7BB9}" SchemaVersion="133">
+<WwiseDocument Type="WorkUnit" ID="{1FECD117-E251-4AEC-98E5-C1CCDD656EEE}" SchemaVersion="133">
 	<Attenuations>
-		<WorkUnit Name="Default Work Unit" ID="{133000AA-8E58-4BEA-8A46-3AB62C1F7BB9}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{1FECD117-E251-4AEC-98E5-C1CCDD656EEE}" PersistMode="Standalone">
 			<ChildrenList>
-				<Attenuation Name="ATT_Bedroom_Spot" ID="{110C63D4-0477-4281-9600-5235356C1590}" ShortID="234915738">
+				<Attenuation Name="ATT_Bedroom_Spot" ID="{3DB7E971-DBA9-4178-A9C2-B889CBAAA0B1}" ShortID="1015157239">
 					<PropertyList>
 						<Property Name="RadiusMax" Type="Real64" Value="25"/>
 					</PropertyList>
 					<CurveUsageInfoList>
 						<VolumeDryUsage>
 							<CurveUsageInfo Platform="Linked" CurveToUse="Custom">
-								<Curve Name="VolumeDry" ID="{645AFA8E-7FFB-4791-9C89-C9026BC3D703}">
+								<Curve Name="VolumeDry" ID="{0BFA5E05-53FA-4306-B3D7-C7339234583D}">
 									<PropertyList>
 										<Property Name="Flags" Type="int32" Value="3"/>
 									</PropertyList>

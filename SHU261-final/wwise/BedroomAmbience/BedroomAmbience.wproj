@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="133" WwiseVersion="v2025.1.12" WwiseBuild="9287">
+<WwiseDocument Type="Project" SchemaVersion="133" WwiseVersion="v2025.1.11" WwiseBuild="9262">
 	<ProjectInfo>
-		<Project Name="BedroomAmbience" ID="{566CEC31-6D65-4FFD-B97C-A668714300D3}">
+		<Project Name="BedroomAmbience" ID="{DFEFDFF2-5BEE-487B-A450-472B8BBCB4AA}">
 			<Platforms>
-				<Platform Name="Windows" ReferencePlatform="Windows" ID="{EE467131-5D13-4AA0-84F6-0ED319A297D3}"/>
+				<Platform Name="Windows" ReferencePlatform="Windows" ID="{F2A42EBD-457E-434D-A6EC-563A0F5580E5}"/>
 			</Platforms>
 			<LanguageList>
-				<Language Name="English(US)" ID="{0798F20D-DFD5-4D60-B72D-CCFCEA4409A6}"/>
-				<Language Name="External" ID="{33CA70D5-D2CB-48DB-A0F6-218C89504FD8}"/>
-				<Language Name="Mixed" ID="{B469EEA0-2CBC-412D-9A5F-A99EE018D107}"/>
-				<Language Name="SFX" ID="{747FC39B-10F3-4584-BA58-0FB7EA459B47}"/>
+				<Language Name="English(US)" ID="{33886528-206A-4A63-848D-CD02206CCAB5}"/>
+				<Language Name="External" ID="{8B68A174-DAF2-4FED-ACD6-3ABD3003ED45}"/>
+				<Language Name="Mixed" ID="{47AA2DCE-FE7C-4992-A344-C9CD4CBEB16C}"/>
+				<Language Name="SFX" ID="{C97312E8-EBB9-4648-BC0C-CB57A633C18A}"/>
 			</LanguageList>
 			<PropertyList>
 				<Property Name="ExternalSourcesInputPath" Type="string">
@@ -48,7 +48,7 @@
 						<Value Platform="Windows"></Value>
 					</ValueList>
 				</Property>
-				<Property Name="WwiseVersionWhenCreated" Type="string" Value="Branch=wwise_v2025.1.12|Build=9287|VersionName=v2025.1.12|Config=Release"/>
+				<Property Name="WwiseVersionWhenCreated" Type="string" Value="Branch=wwise_v2025.1.11|Build=9262|VersionName=v2025.1.11|Config=Release"/>
 			</PropertyList>
 			<SharedValues>
 				<SharedPropertyList ClassName="AudioFileSource" PluginType="0" CompanyID="1" PluginID="0">

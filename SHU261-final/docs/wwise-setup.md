@@ -13,17 +13,21 @@
 | --- | --- |
 | 工程名称 | `BedroomAmbience`（英文，符合"工程名称不要使用中文"的要求） |
 | 工程文件 | `SHU261-final/wwise/BedroomAmbience/BedroomAmbience.wproj` |
-| Wwise 版本 | **2025.1.12.9287**（`branch=wwise_v2025.1.12`，`project schema 133`） |
+| Wwise 版本 | **2025.1.11.9262**（`WwiseVersion="v2025.1.11"`、`WwiseBuild="9262"`、`project schema 133`） |
 | 目标平台 | Windows |
 | Actor-Mixer 工作单元 | `\Containers\Default Work Unit`（Wwise 2025 中 Actor-Mixer Hierarchy 组的显示名） |
 | 创建方式 | `WwiseConsole create-new-project BedroomAmbience.wproj --platform Windows` |
 
-### 关于版本的一处说明
+### 关于版本的说明
 
-题目要求安装 **2025.1.11.9262**，本机已安装的是 **2025.1.12.9287**（同一 2025.1 补丁线内的更新版本，
-本机未另装 9262 版本）。工程格式（schema 133）与 WAAPI 接口完全一致，
-题目涉及的全部功能（Random Container、Positioning、Attenuation、SoundBank）在此版本下均已验证可用。
-若评审要求严格的 9262 版本号，用 Launcher 安装后 `WwiseConsole migrate` 即可无损降/升版本迁移。
+本工程是按要求在 **Wwise 2025.1.11.9262** 下**原生创建**的（不是从别的版本迁移过来的）：
+新建工程 → 脚本导入资产与建结构 → 脚本设置参数/Event → 生成 SoundBank，全流程由 9262 完成。
+工程头版本戳可直接核对：`<WwiseDocument Type="Project" SchemaVersion="133" WwiseVersion="v2025.1.11" WwiseBuild="9262">`。
+
+> 补充记录：开发过程中曾先用本机已有的 2025.1.12.9287 搭过一版，随后按要求改装 9262 并**用 9262 重建**。
+> 两个版本的项目 schema 同为 133，`WwiseConsole migrate` 能顺利加载（`Save complete`），迁移后
+> 12 个子对象、衰减引用、Event Target 与全部参数都完好——但迁移只会改写需要变更的内容，
+> 不会改工程的"创建版本"戳，因此最终交付采用了原生重建的方式，版本信息才与题目完全一致。
 
 ---
 
@@ -31,10 +35,10 @@
 
 ```
 \Actor-Mixer Hierarchy\Default Work Unit
-└─ BedroomAmbience                                   (Folder, {BAC745E2-41AC-4AFD-8C76-D8D67170E810})
-   ├─ AMB_Bedroom_Base_Loop                          (Sound SFX, {F4AD6515-39F5-4D52-A8F7-8BE3A4EABA40})
+└─ BedroomAmbience                                   (Folder, {C34D66AD-655B-484B-823F-B614C2EBD24E})
+   ├─ AMB_Bedroom_Base_Loop                          (Sound SFX, {35884246-4FF6-4662-9B91-F0EF850AEBA4})
    │   └─ 60.64 s 无缝循环基底
-   └─ RND_Bedroom_Spot                               (Random Container, {01BE1073-3978-45D9-B6C7-53E631951F37})
+   └─ RND_Bedroom_Spot                               (Random Container, {91334EFC-75DF-4FE2-9557-C4DC7DFF6253})
       ├─ KEY_single_01                               (0.12 s)
       ├─ KEY_single_02                               (0.20 s)
       ├─ KEY_single_03                               (0.14 s)
@@ -49,16 +53,16 @@
       └─ CHR_move_04                                 (1.62 s)
 
 \Attenuations\Default Work Unit
-└─ ATT_Bedroom_Spot                                 (Attenuation, {110C63D4-0477-4281-9600-5235356C1590})
+└─ ATT_Bedroom_Spot                                 (Attenuation, {3DB7E971-DBA9-4178-A9C2-B889CBAAA0B1})
 
 \Events\Default Work Unit
-├─ PLAY_Bedroom_Ambience                            ({B056EC04-8CEB-45C0-B156-FBE441E2E93D}, Event ID 3257288689)
+├─ PLAY_Bedroom_Ambience                            ({EE616F97-8B60-4D58-93F6-189FEDBE796D}, Event ID 3257288689)
 │   └─ Play_Ambience                                (Action, ActionType=Play → Target = AMB_Bedroom_Base_Loop)
-└─ PLAY_Bedroom_Spot                                ({F3EDE29A-FA25-4749-BDEB-5763CFDA9266}, Event ID 1431343029)
+└─ PLAY_Bedroom_Spot                                ({9FB81606-C2CC-45CB-A2D8-C675121001BE}, Event ID 1431343029)
     └─ Play_Spot                                    (Action, ActionType=Play → Target = RND_Bedroom_Spot)
 
 \SoundBanks\Default Work Unit
-└─ Main                                             (SoundBank, {4FD8356A-0C83-4ED7-B02E-43C125371E65})
+└─ Main                                             (SoundBank, {337D201E-B926-4429-B74B-DA4B2FCB48EC})
 ```
 
 音频源文件被 Wwise 复制到 `Originals/SFX/`，与 `assets/` 下的交付资产同名同内容。
@@ -146,7 +150,7 @@
 | 包含方式 | Inclusions：两个 Event，filter = `events` + `structures` + `media` |
 | 生成命令 | `WwiseConsole generate-soundbank BedroomAmbience.wproj --platform Windows` |
 | 生成结果 | `Process completed successfully`（退出码 0） |
-| 产物 | `GeneratedSoundBanks/Windows/Main.bnk` **11.6 MB**、`Init.bnk`、`Main.txt`、`Main.json`、`SoundbanksInfo` 相关文件 |
+| 产物 | `GeneratedSoundBanks/Windows/Main.bnk` **12.89 MB**、`Init.bnk`、`Main.txt`、`Main.json`、`PlatformInfo.json`、`PluginInfo.json` |
 
 **`Main.txt` 实测内容（证明两个 Event 与 13 个音源全部入包）**
 
@@ -183,15 +187,19 @@ wa_call("ak.wwise.core.object.set",
         { objects = { { object = path, ["@Attenuation"] = "{110C63D4-...}" } } }, {})
 ```
 
-运行方式：
+运行方式（全新工程 → 完整交付物的三步）：
 
 ```powershell
-WwiseConsole execute-lua-script tools/wwise_import.lua --project <proj> --no-color
-WwiseConsole execute-lua-script tools/wwise_build.lua  --project <proj> --no-color
+# 1. 脚手架：建目录、Random Container、Attenuation，导入并整理 13 个资产
+WwiseConsole execute-lua-script tools/wwise_scaffold.lua --project <proj> --no-color
+# 2. 参数与事件：循环、随机、定位、衰减距离、Event/Action、SoundBank 包含关系
+WwiseConsole execute-lua-script tools/wwise_build.lua    --project <proj> --no-color
+# 3. 生成 SoundBank
 WwiseConsole generate-soundbank <proj> --platform Windows
 ```
 
-两个脚本都是**幂等**的：重复执行不会产生重复对象（已存在则复用、已在容器内则不重复移动）。
+三个脚本都是**幂等**的：重复执行不会产生重复对象（已存在则复用、已在容器内则不重复移动）。
+若工程已经有结构、只想补导新增资产，可单独运行 `tools/wwise_import.lua`。
 
 ---
 

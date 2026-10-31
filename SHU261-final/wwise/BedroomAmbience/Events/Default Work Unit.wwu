@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{EDA8EE37-2353-41CC-9DC8-6DD1DE2F1E83}" SchemaVersion="133">
+<WwiseDocument Type="WorkUnit" ID="{32DA6BBA-7441-4A96-92B1-1707FA1BC157}" SchemaVersion="133">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{EDA8EE37-2353-41CC-9DC8-6DD1DE2F1E83}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{32DA6BBA-7441-4A96-92B1-1707FA1BC157}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="PLAY_Bedroom_Ambience" ID="{B056EC04-8CEB-45C0-B156-FBE441E2E93D}">
+				<Event Name="PLAY_Bedroom_Ambience" ID="{EE616F97-8B60-4D58-93F6-189FEDBE796D}">
 					<ChildrenList>
-						<Action Name="Play_Ambience" ID="{BCB33FB9-3693-4454-AF6C-974F17B129FC}" ShortID="17314580">
+						<Action Name="Play_Ambience" ID="{95101BFD-56CD-4BFC-9633-E00DE8AC80CA}" ShortID="537180887">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="AMB_Bedroom_Base_Loop" ID="{F4AD6515-39F5-4D52-A8F7-8BE3A4EABA40}" WorkUnitID="{B2A6F15C-2A64-4950-B586-90BA0E515803}"/>
+									<ObjectRef Name="AMB_Bedroom_Base_Loop" ID="{35884246-4FF6-4662-9B91-F0EF850AEBA4}" WorkUnitID="{9379108B-396F-4DA0-9463-A3D0CC3DFE96}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="PLAY_Bedroom_Spot" ID="{F3EDE29A-FA25-4749-BDEB-5763CFDA9266}">
+				<Event Name="PLAY_Bedroom_Spot" ID="{9FB81606-C2CC-45CB-A2D8-C675121001BE}">
 					<ChildrenList>
-						<Action Name="Play_Spot" ID="{043BD6FE-E9AE-4E60-B98A-336A84A7D7AA}" ShortID="341962015">
+						<Action Name="Play_Spot" ID="{5584A5C3-BDF3-407E-B214-5418D591540C}" ShortID="524764148">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="RND_Bedroom_Spot" ID="{01BE1073-3978-45D9-B6C7-53E631951F37}" WorkUnitID="{B2A6F15C-2A64-4950-B586-90BA0E515803}"/>
+									<ObjectRef Name="RND_Bedroom_Spot" ID="{91334EFC-75DF-4FE2-9557-C4DC7DFF6253}" WorkUnitID="{9379108B-396F-4DA0-9463-A3D0CC3DFE96}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

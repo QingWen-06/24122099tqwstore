@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{088B07A9-84EF-4515-B2A4-29F5C17BF81F}" SchemaVersion="133">
+<WwiseDocument Type="WorkUnit" ID="{449A83D6-C7C8-4DE6-B6AD-E201847FF20C}" SchemaVersion="133">
 	<MixingSessions>
-		<WorkUnit Name="Default Work Unit" ID="{088B07A9-84EF-4515-B2A4-29F5C17BF81F}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{449A83D6-C7C8-4DE6-B6AD-E201847FF20C}" PersistMode="Standalone"/>
 	</MixingSessions>
 </WwiseDocument>

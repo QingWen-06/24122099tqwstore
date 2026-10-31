@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="WorkUnit" ID="{90900290-B475-4EAE-BE24-BA0D481EDF6D}" SchemaVersion="133">
+<WwiseDocument Type="WorkUnit" ID="{5996C6B5-5930-4123-A38A-0CD8F22E6C48}" SchemaVersion="133">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{90900290-B475-4EAE-BE24-BA0D481EDF6D}" PersistMode="Standalone">
+		<WorkUnit Name="Default Work Unit" ID="{5996C6B5-5930-4123-A38A-0CD8F22E6C48}" PersistMode="Standalone">
 			<ChildrenList>
-				<SoundBank Name="Main" ID="{4FD8356A-0C83-4ED7-B02E-43C125371E65}">
+				<SoundBank Name="Main" ID="{337D201E-B926-4429-B74B-DA4B2FCB48EC}">
 					<ObjectInclusionList>
-						<ObjectRef Name="PLAY_Bedroom_Ambience" ID="{B056EC04-8CEB-45C0-B156-FBE441E2E93D}" WorkUnitID="{EDA8EE37-2353-41CC-9DC8-6DD1DE2F1E83}" Origin="Manual" Filter="7"/>
-						<ObjectRef Name="PLAY_Bedroom_Spot" ID="{F3EDE29A-FA25-4749-BDEB-5763CFDA9266}" WorkUnitID="{EDA8EE37-2353-41CC-9DC8-6DD1DE2F1E83}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="PLAY_Bedroom_Spot" ID="{9FB81606-C2CC-45CB-A2D8-C675121001BE}" WorkUnitID="{32DA6BBA-7441-4A96-92B1-1707FA1BC157}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="PLAY_Bedroom_Ambience" ID="{EE616F97-8B60-4D58-93F6-189FEDBE796D}" WorkUnitID="{32DA6BBA-7441-4A96-92B1-1707FA1BC157}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
