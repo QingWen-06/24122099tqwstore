@@ -5,7 +5,6 @@
 			<ChildrenList>
 				<Folder Name="BedroomAmbience" ID="{C34D66AD-655B-484B-823F-B614C2EBD24E}" ShortID="881421473">
 					<ChildrenList>
-						<Folder Name="_Import_Stage" ID="{5E8B7D17-7765-452C-BF49-9BBE0E6591A0}" ShortID="509496042"/>
 						<RandomSequenceContainer Name="RND_Bedroom_Spot" ID="{91334EFC-75DF-4FE2-9557-C4DC7DFF6253}" ShortID="148721813">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="1"/>

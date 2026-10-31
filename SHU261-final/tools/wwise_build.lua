@@ -165,7 +165,24 @@ if sbID and evAmb and evSpot then
   log("[Bank] 包含两个事件 " .. (inc and "OK" or "FAIL"))
 end
 
------------------------------------------- 7. 保存 + 回读校验
+------------------------------------------ 7. 收尾清理：删除空的导入暂存目录
+local stagePath = ROOT .. "\\_Import_Stage"
+local stage = findObject(stagePath)
+if stage then
+  local kids = call("ak.wwise.core.object.get", {
+    from = { id = { stage.id } },
+    transform = { { select = { "children" } } },
+  }, RET)
+  local n = (kids and kids["return"]) and #kids["return"] or 0
+  if n == 0 then
+    local del = call("ak.wwise.core.object.delete", { object = stage.id }, {})
+    log("[清理] 空目录 _Import_Stage 已删除 " .. (del and "OK" or "FAIL"))
+  else
+    log("[清理] _Import_Stage 仍有 " .. n .. " 个子对象，保留")
+  end
+end
+
+------------------------------------------ 8. 保存 + 回读校验
 call("ak.wwise.core.project.save", {}, {})
 
 log("--- 回读校验 ---")
