@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 640" width="980" height="640" font-family="'Segoe UI','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#666"/>
+    </marker>
+    <marker id="dim" markerWidth="8" markerHeight="8" refX="6" refY="2.5" orient="auto">
+      <path d="M0,0 L0,5 L6,2.5 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <rect width="980" height="640" fill="#fbfbf9"/>
+
+  <text x="40" y="46" font-size="22" font-weight="700" fill="#222">图 1　卧室 / 书房（电脑桌）场景平面示意</text>
+  <text x="40" y="72" font-size="13" fill="#666">声源位置 · 录制话筒位置 · 话筒距离　（比例尺 1 m ≈ 140 px，房间约 3.7 m × 2.9 m）</text>
+
+  <!-- 房间墙 -->
+  <rect x="120" y="100" width="520" height="400" fill="#ffffff" stroke="#333" stroke-width="3"/>
+
+  <!-- 窗 -->
+  <rect x="236" y="94" width="216" height="12" fill="#cfe8ff" stroke="#4a90d9" stroke-width="2"/>
+  <text x="344" y="128" font-size="13" fill="#2b6ca3" text-anchor="middle">窗（窗外街区底噪来源 S3）</text>
+
+  <!-- 门 -->
+  <line x1="640" y1="300" x2="640" y2="392" stroke="#fbfbf9" stroke-width="4"/>
+  <line x1="640" y1="300" x2="640" y2="392" stroke="#333" stroke-width="1" stroke-dasharray="4 4"/>
+  <path d="M640,392 A92,92 0 0 0 548,300" fill="none" stroke="#999" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <text x="700" y="352" font-size="13" fill="#555">门（开关声 S7，未录）</text>
+
+  <!-- 桌子 -->
+  <rect x="200" y="416" width="168" height="84" fill="#f0e2cf" stroke="#b98a4c" stroke-width="2"/>
+  <text x="284" y="512" font-size="12" fill="#8a6a37" text-anchor="middle">电脑桌　1.2 m × 0.6 m</text>
+
+  <!-- 显示器 -->
+  <rect x="250" y="420" width="80" height="12" rx="2" fill="#4a4a4a"/>
+  <text x="290" y="412" font-size="11" fill="#666" text-anchor="middle">显示器</text>
+
+  <!-- 键盘 -->
+  <rect x="236" y="452" width="64" height="20" rx="2" fill="#d9d9d9" stroke="#888" stroke-width="1.5"/>
+  <text x="268" y="466" font-size="10" fill="#333" text-anchor="middle">键盘 S4</text>
+
+  <!-- 鼠标 -->
+  <circle cx="318" cy="462" r="7" fill="#e8e8e8" stroke="#888" stroke-width="1.5"/>
+  <text x="332" y="496" font-size="10" fill="#777">鼠标 S6</text>
+
+  <!-- 机箱与风扇 -->
+  <rect x="150" y="430" width="56" height="62" rx="3" fill="#e4e7ea" stroke="#5a6672" stroke-width="2"/>
+  <circle cx="178" cy="452" r="13" fill="#ffffff" stroke="#5a6672" stroke-width="1.6"/>
+  <path d="M178,441 l0,22 M167,452 l22,0 M170,444 l16,16 M186,444 l-16,16" stroke="#8b96a1" stroke-width="1.1"/>
+  <text x="178" y="508" font-size="10" fill="#445465" text-anchor="middle">机箱风扇 S1</text>
+
+  <!-- 椅子 -->
+  <circle cx="284" cy="372" r="30" fill="#eef3f8" stroke="#5b7fa6" stroke-width="2"/>
+  <text x="284" y="376" font-size="11" fill="#3c5b78" text-anchor="middle">椅子 S5</text>
+  <!-- 脚轮 -->
+  <circle cx="262" cy="394" r="4" fill="#5b7fa6"/>
+  <circle cx="306" cy="394" r="4" fill="#5b7fa6"/>
+  <circle cx="262" cy="350" r="4" fill="#5b7fa6"/>
+  <circle cx="306" cy="350" r="4" fill="#5b7fa6"/>
+
+  <!-- 话筒 M1 -->
+  <g>
+    <circle cx="452" cy="286" r="11" fill="#c0392b"/>
+    <text x="452" y="291" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">M1</text>
+    <text x="452" y="266" font-size="11" fill="#c0392b" text-anchor="middle">房间底噪 · 1 m</text>
+  </g>
+
+  <!-- 话筒 M2（风扇 40 cm） -->
+  <g>
+    <circle cx="178" cy="386" r="11" fill="#c0392b"/>
+    <text x="178" y="391" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">M2</text>
+    <line x1="178" y1="397" x2="178" y2="436" stroke="#c0392b" stroke-width="1.4" marker-end="url(#dim)"/>
+    <text x="120" y="378" font-size="11" fill="#c0392b">风扇 · 40 cm</text>
+  </g>
+
+  <!-- 话筒 M3（键盘 20 cm） -->
+  <g>
+    <circle cx="332" cy="470" r="11" fill="#c0392b"/>
+    <text x="332" y="475" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">M3</text>
+    <line x1="322" y1="470" x2="304" y2="465" stroke="#c0392b" stroke-width="1.4" marker-end="url(#dim)"/>
+    <text x="352" y="530" font-size="11" fill="#c0392b">键盘 · 20 cm</text>
+  </g>
+
+  <!-- 话筒 M4（椅子 50 cm） -->
+  <g>
+    <circle cx="368" cy="372" r="11" fill="#c0392b"/>
+    <text x="368" y="377" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">M4</text>
+    <line x1="357" y1="372" x2="316" y2="372" stroke="#c0392b" stroke-width="1.4" marker-end="url(#dim)"/>
+    <text x="386" y="410" font-size="11" fill="#c0392b">椅子 · 50 cm</text>
+  </g>
+
+  <!-- 比例尺 -->
+  <g stroke="#333" stroke-width="2">
+    <line x1="620" y1="596" x2="760" y2="596"/>
+    <line x1="620" y1="590" x2="620" y2="602"/>
+    <line x1="760" y1="590" x2="760" y2="602"/>
+  </g>
+  <text x="690" y="586" font-size="12" fill="#333" text-anchor="middle">1 m</text>
+
+  <!-- 右侧图例与说明 -->
+  <g>
+    <rect x="672" y="100" width="286" height="230" rx="8" fill="#ffffff" stroke="#ddd"/>
+    <text x="692" y="126" font-size="14" font-weight="700" fill="#222">图例</text>
+
+    <circle cx="700" cy="150" r="8" fill="#c0392b"/>
+    <text x="718" y="154" font-size="12" fill="#444">手机录制位置（M1–M4）</text>
+
+    <circle cx="700" cy="176" r="8" fill="#ffffff" stroke="#5a6672" stroke-width="1.6"/>
+    <text x="718" y="180" font-size="12" fill="#444">持续声源（S1 风扇、S2 底噪）</text>
+
+    <circle cx="700" cy="202" r="8" fill="#d9d9d9" stroke="#888" stroke-width="1.4"/>
+    <text x="718" y="206" font-size="12" fill="#444">偶发声源（S4 键盘、S5 椅子）</text>
+
+    <text x="692" y="240" font-size="13" font-weight="700" fill="#222">录制对应关系</text>
+    <text x="692" y="262" font-size="11.6" fill="#444">M2 → A2 机箱风扇（61.64 s）→ 基底资产</text>
+    <text x="692" y="282" font-size="11.6" fill="#444">M3 → B1 键盘（32.28 s）→ 8 条点声</text>
+    <text x="692" y="302" font-size="11.6" fill="#444">M4 → B3 椅子（18.88 s）→ 4 条点声</text>
+    <text x="692" y="322" font-size="11.6" fill="#999">M1 → A1 房间底噪（参考层，未采用）</text>
+  </g>
+
+  <g>
+    <rect x="672" y="352" width="286" height="152" rx="8" fill="#fff8e6" stroke="#e8d9a8"/>
+    <text x="692" y="378" font-size="14" font-weight="700" fill="#8a6d1f">录制要点</text>
+    <text x="692" y="402" font-size="11.6" fill="#6b551a">· 手机下垫毛巾，避免桌面共振</text>
+    <text x="692" y="422" font-size="11.6" fill="#6b551a">· 每段开头留 5 s 静音（噪声底样本）</text>
+    <text x="692" y="442" font-size="11.6" fill="#6b551a">· 峰值控制在 −12 ~ −6 dBFS，绝不削波</text>
+    <text x="692" y="462" font-size="11.6" fill="#6b551a">· 持续声源单段录 ≥ 60 s 且录音全程不走动</text>
+    <text x="692" y="482" font-size="11.6" fill="#6b551a">· 偶发声连续录一串真实动作，后期自动切分</text>
+  </g>
+
+  <text x="40" y="620" font-size="11" fill="#999">示意图为声音设计用途，尺寸为估算值；如需实景照片可另存 assets/scene-photo.jpg</text>
+</svg>

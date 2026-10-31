@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{EDA8EE37-2353-41CC-9DC8-6DD1DE2F1E83}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{EDA8EE37-2353-41CC-9DC8-6DD1DE2F1E83}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="PLAY_Bedroom_Ambience" ID="{B056EC04-8CEB-45C0-B156-FBE441E2E93D}">
+					<ChildrenList>
+						<Action Name="Play_Ambience" ID="{BCB33FB9-3693-4454-AF6C-974F17B129FC}" ShortID="17314580">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AMB_Bedroom_Base_Loop" ID="{F4AD6515-39F5-4D52-A8F7-8BE3A4EABA40}" WorkUnitID="{B2A6F15C-2A64-4950-B586-90BA0E515803}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PLAY_Bedroom_Spot" ID="{F3EDE29A-FA25-4749-BDEB-5763CFDA9266}">
+					<ChildrenList>
+						<Action Name="Play_Spot" ID="{043BD6FE-E9AE-4E60-B98A-336A84A7D7AA}" ShortID="341962015">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RND_Bedroom_Spot" ID="{01BE1073-3978-45D9-B6C7-53E631951F37}" WorkUnitID="{B2A6F15C-2A64-4950-B586-90BA0E515803}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

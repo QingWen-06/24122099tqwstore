@@ -14,15 +14,50 @@
 | 路径 | 说明 |
 | --- | --- |
 | `README.md` | 本文件（仓库总览与作业索引） |
-| `.gitignore` | 忽略规则（Office 临时文件 / Unity 工程等） |
+| `.gitignore` | 忽略规则（Office 临时文件 / Unity 工程 / Wwise 缓存与生成产物 / 原始录音等） |
 | `SHU261-basic-practice/` | 平时作业目录 |
 | `SHU261-basic-practice/AIGC-Game-Voice-Research.md` | 【Task】调研报告（主要成果） |
 | `SHU261-basic-practice/assets/fig1-dialogue-pipeline.svg` | 配图 1：预制对白生产流程与 AIGC 介入点 |
 | `SHU261-basic-practice/assets/fig2-runtime-voice.svg` | 配图 2：运行时动态语音流程与延迟构成 |
+| `SHU261-final/` | 【Final】期末作业目录（环境声设计） |
+| `SHU261-final/README.md` | 期末作业总览与验收对照 |
+| `SHU261-final/docs/` | 场景分析、录音日志、Wwise 工程说明、录音施工单 |
+| `SHU261-final/assets/` | 13 个声音资产（48 kHz / 24 bit / stereo WAV）+ 2 张示意图 |
+| `SHU261-final/tools/` | 自建处理与构建脚本（Python 剪辑管线 + Wwise WAAPI 脚本） |
+| `SHU261-final/wwise/BedroomAmbience/` | Wwise 工程（Wwise 2025.1.12） |
 
 ---
 
 ## 📝 作业索引
+
+### Final — 卧室/书房（电脑桌）环境声设计
+
+把"一个人坐在电脑桌前"的日常空间拆成 **持续层（机箱风扇 + 房间底噪）+ 偶发层（键盘、椅子）** 两层声音结构，
+用手机实录 3 段原始素材，经自建管线剪辑导出 **13 个 48 kHz / 24 bit / stereo 声音资产**，
+再在 Wwise 中搭成"无缝循环基底 + Random Container 随机点声 + Positioning 距离衰减"的可交互声音系统。
+
+| 项目 | 内容 |
+| --- | --- |
+| 总说明 | [`SHU261-final/README.md`](./SHU261-final/README.md) |
+| 场景分析 | [`SHU261-final/docs/scene-analysis.md`](./SHU261-final/docs/scene-analysis.md) |
+| 录音日志与资产测量 | [`SHU261-final/docs/recording-log.md`](./SHU261-final/docs/recording-log.md) |
+| Wwise 工程说明 | [`SHU261-final/docs/wwise-setup.md`](./SHU261-final/docs/wwise-setup.md) |
+| 录音施工单 | [`SHU261-final/docs/recording-guide.md`](./SHU261-final/docs/recording-guide.md) |
+| 场景与分层示意图 | [`fig1-scene-layout.svg`](./SHU261-final/assets/fig1-scene-layout.svg)、[`fig2-sound-layers.svg`](./SHU261-final/assets/fig2-sound-layers.svg) |
+| Wwise 工程 | [`SHU261-final/wwise/BedroomAmbience/BedroomAmbience.wproj`](./SHU261-final/wwise/BedroomAmbience/BedroomAmbience.wproj) |
+| 处理脚本 | [`make_assets.py`](./SHU261-final/tools/make_assets.py)、[`split_onsets.py`](./SHU261-final/tools/split_onsets.py)、[`wwise_build.lua`](./SHU261-final/tools/wwise_build.lua) |
+
+**交付要点**
+
+| 要求 | 结果 |
+| --- | --- |
+| 基底持续声 > 30 s | `AMB_Bedroom_Base_Loop.wav` —— **60.64 s**，等功率无缝循环（非拼接伪循环） |
+| 随机间断声 ≥ 3 个 | **12 个**：键盘 8（单键 5 + 连打 3）、椅子 4 |
+| 格式 48 kHz / 24 bit / stereo | 13/13 合规，削波采样数全为 0 |
+| Random Container + Positioning | `RND_Bedroom_Spot`：Random / Avoid Repeating×3 / Emitter 3D / ATTN 25 m |
+| SoundBank | `Main.bnk` 11.6 MB，含 2 个 Event 与 13 个音源，生成退出码 0 |
+
+---
 
 ### Task 01 — 当下 AIGC 在游戏语音（Voice）设计中的应用（调研）
 

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 600" width="980" height="600" font-family="'Segoe UI','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="a2" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L7,3 z" fill="#7a8794"/>
+    </marker>
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f2e6f7"/>
+      <stop offset="100%" stop-color="#e6d5ee"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8f1f9"/>
+      <stop offset="100%" stop-color="#d5e6f4"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f3f6f4"/>
+      <stop offset="100%" stop-color="#e2ece5"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="980" height="600" fill="#fbfbf9"/>
+
+  <text x="40" y="46" font-size="22" font-weight="700" fill="#222">图 2　场景声音的分层结构与中间件映射</text>
+  <text x="40" y="72" font-size="13" fill="#666">环境声设计不是"录一条环境音"，而是把现实拆成不同时间尺度的层，再分别用不同中间件结构承载</text>
+
+  <!-- 第 3 层（可选，未采用） -->
+  <rect x="40" y="100" width="600" height="96" rx="10" fill="url(#g3)" stroke="#c3a6d3" stroke-width="1.6" stroke-dasharray="6 5"/>
+  <text x="64" y="130" font-size="15" font-weight="700" fill="#6b4a7d">第 3 层　人声层（Living Layer）</text>
+  <text x="64" y="154" font-size="12" fill="#6b4a7d">远处说话、走廊人声 —— 提供"有人在"的现场感</text>
+  <text x="64" y="176" font-size="12" fill="#9a7fac">本版未采用：人声会抢走对"空间"的注意力，且合住环境录音无法取得清晰授权</text>
+  <text x="600" y="130" font-size="12" fill="#9a7fac" text-anchor="end">可选层</text>
+
+  <!-- 第 2 层 -->
+  <rect x="40" y="212" width="600" height="150" rx="10" fill="url(#g2)" stroke="#7ea8c9" stroke-width="1.8"/>
+  <text x="64" y="242" font-size="15" font-weight="700" fill="#2b5d80">第 2 层　偶发层（Spot / One-shot）</text>
+  <text x="64" y="268" font-size="12" fill="#2b5d80">键盘 8 条（0.11–0.88 s）　椅子 4 条（1.44–2.00 s）</text>
+  <text x="64" y="292" font-size="12" fill="#3f6c8c">特征：短促、随机出现、有明确起止、天然带"距离语义"</text>
+  <text x="64" y="316" font-size="12" fill="#3f6c8c">作用：提供"这里有人在做事情"的信息层，是叙事来源</text>
+  <text x="64" y="342" font-size="12" fill="#6c8ba3">若与基底混在一起 → 每次循环听到完全相同的事件序列，立刻假</text>
+
+  <!-- 第 1 层 -->
+  <rect x="40" y="378" width="600" height="150" rx="10" fill="url(#g1)" stroke="#7faa8b" stroke-width="1.8"/>
+  <text x="64" y="408" font-size="15" font-weight="700" fill="#2f5c3d">第 1 层　持续层（Continuous Ambience）</text>
+  <text x="64" y="434" font-size="12" fill="#2f5c3d">机箱风扇气流（120–500 Hz，含 152/240/380 Hz 叶片谐波）+ 房间底噪</text>
+  <text x="64" y="458" font-size="12" fill="#416b4e">特征：无始无终、音高音量恒定、必须无缝循环</text>
+  <text x="64" y="482" font-size="12" fill="#416b4e">作用：提供"这个空间是活的"的底层存在感；抽掉它整个场景会瞬间变空</text>
+  <text x="64" y="508" font-size="12" fill="#6d8d77">若做成点声 → 会听出"隔一会儿响一次"的规律，空间感破碎</text>
+
+  <!-- 右侧：中间件映射 -->
+  <text x="700" y="118" font-size="15" font-weight="700" fill="#222">Wwise 映射</text>
+
+  <rect x="672" y="212" width="270" height="150" rx="10" fill="#ffffff" stroke="#7ea8c9" stroke-width="1.8"/>
+  <text x="692" y="240" font-size="13.5" font-weight="700" fill="#2b5d80">Random Container</text>
+  <text x="692" y="262" font-size="11.6" fill="#3f6c8c">RND_Bedroom_Spot</text>
+  <text x="692" y="284" font-size="11.6" fill="#444">RandomOrSequence = 1（Random）</text>
+  <text x="692" y="304" font-size="11.6" fill="#444">AvoidRepeating = true ×3</text>
+  <text x="692" y="324" font-size="11.6" fill="#444">PlayMode = Step（单发）</text>
+  <text x="692" y="344" font-size="11.6" fill="#c0392b">3DPosition=Emitter + ATT 25 m</text>
+
+  <rect x="672" y="378" width="270" height="150" rx="10" fill="#ffffff" stroke="#7faa8b" stroke-width="1.8"/>
+  <text x="692" y="406" font-size="13.5" font-weight="700" fill="#2f5c3d">Looping Sound SFX</text>
+  <text x="692" y="428" font-size="11.6" fill="#416b4e">AMB_Bedroom_Base_Loop</text>
+  <text x="692" y="450" font-size="11.6" fill="#444">IsLoopingEnabled = true</text>
+  <text x="692" y="470" font-size="11.6" fill="#444">IsLoopingInfinite = true</text>
+  <text x="692" y="490" font-size="11.6" fill="#444">60.64 s 等功率无缝循环</text>
+  <text x="692" y="510" font-size="11.6" fill="#444">Volume = −3 dB</text>
+
+  <!-- 连接线 -->
+  <line x1="640" y1="288" x2="672" y2="288" stroke="#7a8794" stroke-width="2" marker-end="url(#a2)"/>
+  <line x1="640" y1="452" x2="672" y2="452" stroke="#7a8794" stroke-width="2" marker-end="url(#a2)"/>
+  <line x1="640" y1="148" x2="672" y2="148" stroke="#c9b3d6" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="676" y="152" font-size="11.5" fill="#9a7fac">（本版未实现）</text>
+
+  <!-- 底部：Event -->
+  <rect x="672" y="540" width="270" height="0" fill="none"/>
+  <g>
+    <rect x="40" y="546" width="600" height="40" rx="8" fill="#f6f2ea" stroke="#d8c9a8"/>
+    <text x="64" y="572" font-size="12.5" fill="#6b551a">Event：PLAY_Bedroom_Ambience（基底循环一次）　+　PLAY_Bedroom_Spot（每次操作触发一条随机点声）</text>
+  </g>
+</svg>

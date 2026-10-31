@@ -49,6 +49,33 @@ $RECYCLE.BIN/
 GeneratedSoundBanks/
 .cache/
 
+# ===== Wwise 工程（期末作业 SHU261-final/wwise）=====
+# 以下均为"可由工程再生成"或"与具体机器/会话绑定"的文件，不纳入版本库；
+# .wproj / *.wwu / Originals/ 才是需要保留的工程与音源本体。
+# 注意：gitignore 的 # 只有写在行首才是注释，规则后不能跟行尾注释。
+# GeneratedSoundBanks：SoundBank 生成产物，用 generate-soundbank 一键重建
+**/GeneratedSoundBanks/
+# .cache：Wwise 本地缓存（LMDB 索引等）
+**/.cache/
+# *.validationcache：工程加载校验缓存
+**/*.validationcache
+# *.wsettings：本机窗口布局等用户设置
+**/*.wsettings
+# *.akd / *.prof：调试与性能分析缓存
+**/*.akd
+**/*.prof
+# .backup*：自动备份
+**/.backup*
+# IncrementalSoundBankData.xml：增量生成中间数据
+**/IncrementalSoundBankData.xml
+
+# ===== 原始录音与中间产物（体积大、非交付物）=====
+# 交付资产在 SHU261-final/assets/ 下，原始录音仅保存在本地
+final-raw/
+build/
+staging/
+*.raw.wav
+
 # ===== Python =====
 __pycache__/
 *.py[cod]
